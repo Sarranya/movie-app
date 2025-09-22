@@ -20,7 +20,7 @@ const Row = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const value = e.target.search.value;
-    axios.get(`http://www.omdbapi.com/?apikey=${APIKEY}&s=${value}&page=1`).then((resp) => {
+    axios.get(`https://www.omdbapi.com/?apikey=${APIKEY}&s=${value}&page=1`).then((resp) => {
       console.log(resp.data.Response)
       if (resp.data.Response == "True") {
         setNoSearchData(true)
